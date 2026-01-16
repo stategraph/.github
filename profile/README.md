@@ -21,7 +21,7 @@ Stategraph replaces Terraform/OpenTofu's flat state file with a database-backed 
 | JSON blob | SQL-queryable |
 | Parse to audit | Built-in history |
 
-[**Website**](https://stategraph.com) · [**Blog**](https://stategraph.com/blog) · [**Docs**](https://stategraph.com/docs) · [**Discussions**](https://github.com/orgs/stategraph/discussions) · [**Packages**](https://github.com/orgs/stategraph/packages)
+[**Website**](https://stategraph.com) · [**Blog**](https://stategraph.com/blog) · [**Docs**](https://stategraph.com/docs) · [**Discussions**](https://github.com/orgs/stategraph/discussions) · [**Releases**](https://github.com/stategraph/releases)
 
 ---
 

@@ -3,9 +3,13 @@
 **Terraform plans in seconds, not minutes.**
 
 ```
-$ terraform plan                    $ stategraph plan
-Refreshing state... [2847]          Computing change cone... [12]
-⚠ 3m 47s elapsed                    ✓ Ready in 2.3s
+$ terraform plan
+Refreshing state... [2847]
+⚠ 3m 47s elapsed
+
+$ stategraph plan
+Computing change cone... [12]
+✓ Ready in 2.3s
 ```
 
 Stategraph replaces Terraform/OpenTofu's flat state file with a database-backed dependency graph. With file-based state, any operation locks everything. With graph-based state, teams lock only what they touch.

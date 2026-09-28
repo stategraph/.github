@@ -9,14 +9,13 @@
 
 <h3 align="center">Terraform without the state file bottleneck</h3>
 
-One state file means one global lock. Stategraph replaces it with a dependency graph, so plans and applies scale with your change and independent changes run at the same time. Start with [stategraph/stategraph](https://github.com/stategraph/stategraph).
+Stategraph runs Terraform and OpenTofu from pull requests, and can store your state as a dependency graph in PostgreSQL instead of a state file.
 
-> [!NOTE]
-> Terrateam and Stategraph have merged into one platform. We're transitioning gradually; existing Terrateam setups keep working unchanged. During the transition:
->
-> Stategraph Orchestration (formerly Terrateam) → [app.terrateam.io](https://app.terrateam.io) · [docs.terrateam.io](https://docs.terrateam.io)  
-> Stategraph Infrastructure as a Database → [app.stategraph.cloud](https://app.stategraph.cloud)
+* **Stategraph Orchestration** plans every pull request on GitHub or GitLab and posts the result as a comment. Policy checks, cost estimates, and approvals run in the review. The apply runs on merge or on a comment. Open source and self-hostable.
+* **Stategraph Infrastructure as a Database** stores each state as a graph in PostgreSQL. A plan reads only the resources your change reaches, changes that touch different resources apply at the same time, and you can query every state with SQL. Works from the CLI with any CI.
 
-[**Website**](https://stategraph.com) · [**Docs**](https://stategraph.com/docs) · [**Blog**](https://stategraph.com/blog) · [**Slack**](https://terrateam.io/slack) · [**Discussions**](https://github.com/orgs/stategraph/discussions) · [**Releases**](https://github.com/stategraph/releases)
+Start with [stategraph/stategraph](https://github.com/stategraph/stategraph) or the [quickstart](https://stategraph.com/docs/get-started/quickstart).
+
+[**Website**](https://stategraph.com) · [**Docs**](https://stategraph.com/docs) · [**Blog**](https://stategraph.com/blog) · [**Slack**](https://stategraph.com/slack)
 
 <sub>hello@stategraph.com</sub>
